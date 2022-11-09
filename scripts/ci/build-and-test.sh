@@ -9,6 +9,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")"; pwd)" # Figure out where the 
 require_env_var GIT_REF
 
 npm ci
+ls -larth node_modules/@pact-foundation/pact-core/build/Release
 
 npm run dist
 cp package.json ./dist
@@ -26,6 +27,7 @@ echo "This will be version '$(npx absolute-version)'"
 # Link the build so that the examples are always testing the
 # current build, in it's properly exported format
 (cd dist && npm ci)
+ls -larth dist/node_modules/@pact-foundation/pact-core/build/Release
 
 echo "Running e2e examples build for node version $(node --version)"
 for i in examples/*; do
