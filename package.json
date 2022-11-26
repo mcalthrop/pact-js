@@ -17,7 +17,8 @@
     "postdist": "npm test",
     "predist": "npm run clean && npm run format:check && npm run lint",
     "release": "standard-version",
-    "test": "nyc --check-coverage --reporter=html --reporter=text-summary mocha -t 120000"
+    "test": "nyc --check-coverage --reporter=html --reporter=text-summary mocha -t 120000",
+    "postinstall": "./scripts/install-plugins.sh"
   },
   "repository": {
     "type": "git",
