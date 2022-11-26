@@ -132,7 +132,7 @@
     "@types/mocha": "^8.0.4",
     "@types/mockery": "^1.4.29",
     "@types/nock": "^9.1.2",
-    "@types/node": "^8.0.24",
+    "@types/node": "^18.11.9",
     "@types/ramda": "^0.26.43",
     "@types/sinon": "^7.0.6",
     "@types/sinon-chai": "^2.7.29",
