@@ -37,7 +37,7 @@ detect_osarch
 if [ ! -f ~/.pact/bin/pact-plugin-cli ]; then
     echo "--- 🐿  Installing plugins CLI tool"
     mkdir -p ~/.pact/bin
-    wget https://github.com/pact-foundation/pact-plugins/releases/download/${package}/pact-plugin-cli-${os}-${arch}.gz -O ~/.pact/bin/pact-plugin-cli-${os}-${arch}.gz
+    curl -L -o ~/.pact/bin/pact-plugin-cli-${os}-${arch}.gz https://github.com/pact-foundation/pact-plugins/releases/download/pact-plugin-cli-v${VERSION}/pact-plugin-cli-windows-x86_64.exe.gz
     gunzip -N ~/.pact/bin/pact-plugin-cli-${os}-${arch}.gz
     chmod +x ~/.pact/bin/pact-plugin-cli
 fi
