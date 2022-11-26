@@ -20,6 +20,10 @@ function detect_osarch() {
             os='osx'
             arch='aarch64'
             ;;
+        CYGWIN*|MINGW32*|MSYS*|MINGW*)
+            os="windows"
+            arch='x86_64'
+            ;;
         *)
         echo "Sorry, you'll need to install the plugin CLI manually."
         exit 1
