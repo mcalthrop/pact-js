@@ -58,8 +58,9 @@ export const freePort = (): Promise<number> => {
       if (addr !== null && typeof addr !== 'string') {
         const port = addr.port;
         s.close(() => res(port));
+      } else {
+        throw Error('unable to find a free port');
       }
-      throw Error('unable to find a free port');
     });
   });
 };
